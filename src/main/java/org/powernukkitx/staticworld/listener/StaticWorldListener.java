@@ -10,8 +10,9 @@ import cn.nukkit.event.level.LevelUnloadEvent;
 import cn.nukkit.event.player.PlayerPreChunkRequestEvent;
 import cn.nukkit.event.player.PlayerTeleportEvent;
 import cn.nukkit.level.Level;
-import cn.nukkit.network.protocol.LevelChunkPacket;
+import io.netty.buffer.Unpooled;
 import io.netty.util.internal.EmptyArrays;
+import org.cloudburstmc.protocol.bedrock.packet.LevelChunkPacket;
 import org.powernukkitx.staticworld.utils.StaticEntry;
 
 import static org.powernukkitx.staticworld.StaticWorld.ENTRIES;
@@ -67,11 +68,11 @@ public class StaticWorldListener implements Listener {
             if(ENTRIES.containsKey(to.getName())) {
                 Player player = event.getPlayer();
                 for(long chunkHash : player.getUsedChunks()) {
-                    LevelChunkPacket chunk = new LevelChunkPacket();
-                    chunk.chunkX = Level.getHashX(chunkHash);
-                    chunk.chunkZ = Level.getHashZ(chunkHash);
-                    chunk.data = EmptyArrays.EMPTY_BYTES;
-                    player.dataPacketImmediately(chunk);
+                    LevelChunkPacket packet = new LevelChunkPacket();
+                    packet.setChunkX(Level.getHashX(chunkHash));
+                    packet.setChunkZ(Level.getHashZ(chunkHash));
+                    packet.setSerializedChunkData(Unpooled.buffer());
+                    player.sendPacketImmediately(packet);
                 }
             }
         }
