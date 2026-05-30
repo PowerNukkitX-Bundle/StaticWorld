@@ -12,6 +12,7 @@ import cn.nukkit.event.player.PlayerTeleportEvent;
 import cn.nukkit.level.Level;
 import io.netty.buffer.Unpooled;
 import io.netty.util.internal.EmptyArrays;
+import org.cloudburstmc.protocol.bedrock.data.payload.common.DimensionType;
 import org.cloudburstmc.protocol.bedrock.packet.LevelChunkPacket;
 import org.powernukkitx.staticworld.utils.StaticEntry;
 
@@ -71,6 +72,7 @@ public class StaticWorldListener implements Listener {
                     LevelChunkPacket packet = new LevelChunkPacket();
                     packet.setChunkX(Level.getHashX(chunkHash));
                     packet.setChunkZ(Level.getHashZ(chunkHash));
+                    packet.setDimension(DimensionType.from(from.getDimension()));
                     packet.setSerializedChunkData(Unpooled.buffer());
                     player.sendPacketImmediately(packet);
                 }
