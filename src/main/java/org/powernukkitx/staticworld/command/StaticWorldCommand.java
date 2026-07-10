@@ -1,13 +1,13 @@
 package org.powernukkitx.staticworld.command;
 
-import cn.nukkit.Player;
-import cn.nukkit.Server;
-import cn.nukkit.command.CommandSender;
-import cn.nukkit.command.PluginCommand;
-import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.command.tree.ParamList;
-import cn.nukkit.command.utils.CommandLogger;
-import cn.nukkit.math.AxisAlignedBB;
+import org.powernukkitx.Player;
+import org.powernukkitx.Server;
+import org.powernukkitx.command.CommandSender;
+import org.powernukkitx.command.PluginCommand;
+import org.powernukkitx.command.data.CommandParameter;
+import org.powernukkitx.command.tree.ParamList;
+import org.powernukkitx.command.utils.CommandLogger;
+import org.powernukkitx.math.AxisAlignedBB;
 import org.powernukkitx.simpleworldedit.utils.PlayerManager;
 import org.powernukkitx.simpleworldedit.utils.Selection;
 import org.powernukkitx.staticworld.StaticWorld;

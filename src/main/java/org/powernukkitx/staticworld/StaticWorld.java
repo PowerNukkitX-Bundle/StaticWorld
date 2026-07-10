@@ -1,7 +1,7 @@
 package org.powernukkitx.staticworld;
 
-import cn.nukkit.Server;
-import cn.nukkit.plugin.PluginBase;
+import org.powernukkitx.Server;
+import org.powernukkitx.plugin.PluginBase;
 import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
 import org.powernukkitx.staticworld.command.StaticWorldCommand;
 import org.powernukkitx.staticworld.listener.StaticWorldListener;

@@ -6,7 +6,7 @@
 
     <groupId>org.powernukkitx.staticworld</groupId>
     <artifactId>StaticWorld</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -17,10 +17,6 @@
         <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2/</url>
-        </repository>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://www.jitpack.io</url>
         </repository>
         <repository>
             <id>opencollab-repository-maven-releases</id>
@@ -43,13 +39,13 @@
         <dependency>
             <groupId>org.powernukkitx</groupId>
             <artifactId>server</artifactId>
-            <version>b-migration-SNAPSHOT</version>
+            <version>nightly-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.PowerNukkitX-Bundle</groupId>
+            <groupId>org.powernukkitx</groupId>
             <artifactId>SimpleWorldEdit</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

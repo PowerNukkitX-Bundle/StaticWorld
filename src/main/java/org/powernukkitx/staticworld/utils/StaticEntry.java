@@ -1,7 +1,7 @@
 package org.powernukkitx.staticworld.utils;
 
-import cn.nukkit.level.Level;
-import cn.nukkit.utils.Config;
+import org.powernukkitx.level.Level;
+import org.powernukkitx.utils.Config;
 import it.unimi.dsi.fastutil.longs.LongArraySet;
 import lombok.Getter;
 import lombok.Setter;
